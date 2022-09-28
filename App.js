@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Platform, StyleSheet, Text, TextInput, View, KeyboardAvoidingView, TouchableOpacity, Keyboard } from 'react-native';
 import Task from './components/Task';
+import Header from './components/Header';
 
 export default function App() {
   const [task, setTask] = useState();
@@ -21,7 +22,9 @@ export default function App() {
     <View style={styles.container}>
     {/* Today's taks */}
       <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Today's Tasks</Text>
+      <View style={styles.header}>
+        <Header />
+        </View>
         <View style={styles.items}>
         {/* this is where the tasks will go */}
         {
